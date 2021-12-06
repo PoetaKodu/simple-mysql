@@ -1,0 +1,24 @@
+{
+	"name": "simple-mysql",
+	"type": "static lib",
+	"language": "C++20",
+	"includeFolders": {
+		"public": "include"
+	},
+	"files": [
+		"include/SimpleMySQL/**.hpp",
+		"src/**.cpp"
+	],
+	"pch":{
+		"header": "include/SimpleMySQL/SimpleMySQLPCH.hpp",
+		"source": "src/SimpleMySQLPCH.cpp",
+		"definition": "SIMPLEMYSQL_PCH"
+	},
+	"defines": {
+		"interface": "SIMPLEMYSQL_PCH=\"SimpleMySQL/SimpleMySQLPCH.hpp\""
+	},
+	"dependencies": {
+		"public": [ "mysql" ]
+	},
+	"version": "0.0.1"
+}
